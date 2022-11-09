@@ -1,0 +1,168 @@
+body {
+  height: 100vh;
+  background-image: url("./images/clouds.jpg");
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+body #root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #root input {
+  width: 300px;
+  height: 56px;
+  padding-left: 30px;
+  border-radius: 8px;
+  margin-bottom: 11px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body #root input::-webkit-input-placeholder {
+  color: #000;
+}
+
+body #root input:-ms-input-placeholder {
+  color: #000;
+}
+
+body #root input::-ms-input-placeholder {
+  color: #000;
+}
+
+body #root input::placeholder {
+  color: #000;
+}
+
+body #root button#submit {
+  position: absolute;
+  top: 20px;
+  left: 275px;
+}
+
+body #root #suggestions {
+  position: absolute;
+  min-width: 300px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  line-height: 34px;
+  z-index: 100;
+}
+
+body #root #suggestions option {
+  margin: 3px;
+}
+
+body #root #suggestions option:hover {
+  background-color: #dee2e6;
+  cursor: pointer;
+}
+
+body #root #favButton {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+body #root #container .city-card {
+  width: 300px;
+  min-height: 360px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 24px;
+  text-align: center;
+}
+
+body #root #container .city-card p {
+  font-size: 16px;
+}
+
+body #root #container .city-card h5 {
+  margin-top: 11px;
+  margin-bottom: 3px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+body #root #container .city-card h5::before {
+  content: url(/images/location.svg);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+body #root #container .city-card img {
+  width: 109px;
+}
+
+body #root #container .city-card h6 {
+  font-size: 53px;
+  font-weight: 400;
+}
+
+body #spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #spinner::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 2px solid #ffffff;
+  border-top: 3px solid #000000;
+  border-radius: 100%;
+  will-change: transform;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

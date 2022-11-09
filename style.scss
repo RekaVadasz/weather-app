@@ -1,0 +1,135 @@
+body {
+    height: 100vh;
+    background-image: url("./images/clouds.jpg");
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+  
+    #root {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        input {
+            width: 300px;
+            height: 56px;
+            padding-left: 30px;
+            border-radius: 8px;
+            margin-bottom: 11px;
+            background-color: rgba(255,255,255,0.4);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            &::placeholder {
+            color: #000;
+            }
+        }
+
+        button#submit {
+            position: absolute;
+            top: 20px;
+            left: 275px;
+        }
+
+        #suggestions {
+            position: absolute;
+            min-width: 300px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            line-height: 34px;
+            z-index: 100;
+
+            option {
+                margin: 3px;
+
+                &:hover {
+                    background-color: #dee2e6;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        #favButton {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+
+        #container {     
+            .city-card {
+                width: 300px;
+                min-height: 360px;
+                height: fit-content;
+                border-radius: 8px;
+                background-color: rgba(255,255,255,0.8);
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 24px;
+                text-align: center;
+
+                p {
+                    font-size: 16px;
+                }
+
+                h5 {
+                    margin-top: 11px;
+                    margin-bottom: 3px;
+                    font-size: 28px;
+                    font-weight: 500;
+                    line-height: 34px;
+                
+                    &::before {
+                        content: url(/images/location.svg);
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 3px;
+                    }
+                }
+
+                img {
+                    width: 109px;
+                }
+
+                h6 {
+                    font-size: 53px;
+                    font-weight: 400
+                } 
+            }
+        }
+    }
+
+  //----------loading spinner----------
+#spinner:not([hidden]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+    
+#spinner::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #ffffff;
+    border-top: 3px solid #000000;
+    border-radius: 100%;
+    will-change: transform;
+    animation: spin 1s infinite linear
+}
+    
+@keyframes 
+    spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
