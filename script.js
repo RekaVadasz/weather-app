@@ -177,7 +177,7 @@ const loadEvent = function () {
         spinner.removeAttribute('hidden');
         
         const response = await fetch(`
-        http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${value}&aqi=no
+        https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${value}&aqi=no
         `);
 
         if (response.status != 200) {
@@ -248,7 +248,7 @@ const loadEvent = function () {
 
     //----------fetching autocomplete data----------
     async function getCity(value) {
-        const response = await fetch (`http://api.weatherapi.com/v1/search.json?key=${myKey}&q=${value}`);
+        const response = await fetch (`https://api.weatherapi.com/v1/search.json?key=${myKey}&q=${value}`);
         const cities = await response.json();
         let results = [];
         for (let i = 0; i < cities.length; i++) {
