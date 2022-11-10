@@ -78,7 +78,7 @@ body {
                     line-height: 34px;
                 
                     &::before {
-                        content: url(/images/location.svg);
+                        content: url("./images/location.svg");
                         display: inline-block;
                         width: 20px;
                         height: 20px;
